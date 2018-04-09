@@ -3,6 +3,7 @@ Command line (CLI) tool to inspect Apache Parquet files on the go
 
 `parq` is small script to easily preview Parquet files. It can show basic information needed for quick debugging.
 
+Current features set are what I need, please use Github issues for any requests/suggestions.
 
 ## Install
 
@@ -14,7 +15,7 @@ An executable script called `parq` will be installed.
 
 Get metadata and schema information:
 
-`$ parq path/to/file.parquet`
+`$ parq input.parquet`
 
 ```
  # Metadata
@@ -40,12 +41,12 @@ country: BYTE_ARRAY UTF8
 
 Get top N records (head)
 
-`parq path/to/file.parquet --head 10`
+`parq input.parquet --head 10`
 
 Get bottom N records (tail)
 
-`parq path/to/file.parquet --head 10`
+`parq input.parquet --head 10`
 
 Get total rows count:
 
-`parq path/to/file.parquet --count`
+`parq input.parquet --count`
