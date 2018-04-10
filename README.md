@@ -63,7 +63,7 @@ Get top N records (head)
 
 Get bottom N records (tail)
 
-`$ parq input.parquet --head 10`
+`$ parq input.parquet --tail 10`
 
 
 ## Help
