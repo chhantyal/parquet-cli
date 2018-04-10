@@ -3,7 +3,7 @@ Command line (CLI) tool to inspect Apache Parquet files on the go
 
 Apache Parquet is a columnar storage format commonly used in the Hadoop ecosystem.
 
-`parq` is small, easy to install utility to view and get basic information from Parquet files.
+`parq` is small, easy to install, Python utility to view and get basic information from Parquet files.
 
 Current features set are what I need, please use Github issues for any requests/suggestions.
 

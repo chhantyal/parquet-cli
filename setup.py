@@ -1,10 +1,13 @@
 
 from setuptools import setup, find_packages
 
+msg = "Command line (CLI) tool to inspect Apache Parquet files on the go"
+
 setup(
     name='parquet-cli',
-    version='1.0',
-    description='Command line (CLI) tool to inspect Apache Parquet files on the go',
+    version='1.1',
+    description=msg,
+    long_description=msg,
     author='Nar Kumar Chhantyal',
     author_email='nkchhantyal@gmail.com',
     url='https://github.com/chhantyal/parquet-cli',
