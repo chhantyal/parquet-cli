@@ -63,7 +63,7 @@ Get top N records (head)
 
 Get bottom N records (tail)
 
-`parq input.parquet --head 10`
+`$ parq input.parquet --head 10`
 
 
 ## Help
@@ -71,7 +71,7 @@ Get bottom N records (tail)
 `$ parq --help`
 
 ```
-usage: parq [-h] [-s [SCHEMA] | --head [HEAD] | --tail [TAIL] | -c [COUNT]] file
+usage: usage: parq file [-s [SCHEMA] | --head [HEAD] | --tail [TAIL] | -c [COUNT]]
 
 positional arguments:
   file                  Parquet file

@@ -49,7 +49,10 @@ def main(cmd_args=sys.argv, skip=False):
 
 
 def init_args():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Command line (CLI) tool to inspect Apache Parquet files on the go",
+        usage="usage: parq file [-s [SCHEMA] | --head [HEAD] | --tail [TAIL] | -c [COUNT]]"
+    )
 
     group = parser.add_mutually_exclusive_group()
 
