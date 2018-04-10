@@ -24,8 +24,8 @@ setup(
     packages=find_packages(),
     platforms='any',
     install_requires=[
-        'pandas',
-        'pyarrow'
+        'pandas==0.22.0',
+        'pyarrow==0.9.0.post1'
     ],
     entry_points={
         'console_scripts': [
