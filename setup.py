@@ -29,6 +29,6 @@ setup(
             'parq = parq.main:main',
         ]
     },
-    package_data={'data': ['*.parquet']},
+    package_data={'example': ['*.parquet']},
     include_package_data=True,
 )
