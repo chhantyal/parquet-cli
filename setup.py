@@ -1,11 +1,21 @@
-
+import sys
 from setuptools import setup, find_packages
 
 msg = "Command line (CLI) tool to inspect Apache Parquet files on the go"
 
+
+def get_pyarrow_version():
+
+    if sys.platform == "darwin":
+        pyarrow = 'pyarrow>=0.9.0.post1'
+    else:
+        pyarrow = 'pyarrow>=0.9.0'
+    return pyarrow
+
+
 setup(
     name='parquet-cli',
-    version='1.1',
+    version='1.2',
     description=msg,
     long_description=msg,
     author='Nar Kumar Chhantyal',
@@ -25,7 +35,7 @@ setup(
     platforms='any',
     install_requires=[
         'pandas==0.22.0',
-        'pyarrow==0.9.0.post1'
+        get_pyarrow_version()
     ],
     entry_points={
         'console_scripts': [
