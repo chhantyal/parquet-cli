@@ -1,8 +1,9 @@
 from __future__ import print_function
 
-import sys
 import argparse
+import sys
 
+import pandas as pd
 import pyarrow.parquet as pq
 
 
@@ -34,6 +35,8 @@ def main(cmd_args=sys.argv, skip=False):
     """
     if not skip:
         cmd_args = init_args()
+
+    pd.set_option('display.max_columns', None)
 
     pq_table = pq.read_table(cmd_args.file)
     if cmd_args.head:

@@ -1,5 +1,6 @@
 import sys
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 
 msg = "Command line (CLI) tool to inspect Apache Parquet files on the go"
 
@@ -34,7 +35,7 @@ setup(
     packages=find_packages(),
     platforms='any',
     install_requires=[
-        'pandas==0.22.0',
+        'pandas>=0.22.0',
         get_pyarrow_version()
     ],
     entry_points={
