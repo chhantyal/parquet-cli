@@ -17,8 +17,13 @@ def get_schema(parquet_file):
     return r.schema
 
 
+def pdtbl(pq_table):
+    data = pq_table.to_pandas(date_as_object=True, timestamp_as_object=True)
+    return data
+
+
 def get_data(pq_table, n, head=True):
-    data = pq_table.to_pandas()
+    data = pdtbl(pq_table)
     if head:
         rows = data.head(n)
     else:
@@ -44,7 +49,7 @@ def main(cmd_args=sys.argv, skip=False):
     elif cmd_args.tail:
         print(get_data(pq_table, cmd_args.tail, head=False))
     elif cmd_args.count:
-        print(len(pq_table.to_pandas().index))
+        print(len(pdtbl(pq_table).index))
     elif cmd_args.schema:
         print("\n # Schema \n", get_schema(cmd_args.file))
     else:
